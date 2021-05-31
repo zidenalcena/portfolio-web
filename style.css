@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-shadow: border-box;
+    scroll-behavior: smooth;
 }
 :root{
     --font: 'Montserrat', sans-serif;
@@ -17,6 +18,7 @@ body{
     font-family: var(--font);
     color: var(--main-font-color);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 .center{
     display: flex;
@@ -107,70 +109,127 @@ body{
     right: 60px;
     z-index: -1;
 }
+
+/* about */
+.about{
+    width: 100%;
+    padding: 8em 0;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: start;
+}
+.about .box_wrap{
+    margin: 2em 0;
+}
+.about .box_wrap .heading{
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+.about .box_wrap .heading::before{
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 80px;
+    height: 8px;
+    background: var(--main-color);
+    z-index: -1;
+}
+.about .box_wrap .text{
+    color: var(--sec-font-color);
+}
+.about .box_wrap{
+    width: 35%;
+}
+.skills_box i{
+    margin-right: 0.5em;
+    margin-bottom: .5em;
+    color: var(--sec-font-color);
+}
+
+/* education */
+.education{
+    width: 100%;
+    background: #151618;
+    padding: 5em 0;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.education .left_box{
+    width: 20%;
+}
+.education .left_box .container{
+    margin: 2em 0;
+}
+.education .heading{
+    font-size: 3em;
+}
+.education :is(h3, small, p){
+    margin: 0.5em 0;
+}
+.left_box .container{
+    position: relative;
+}
+.left_box .container::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    background: var(--main-color);
+    left: -20px;
+}
+
+.education :is(small, p){
+    color: var(--sec-font-color);
+}
+.education .right_box{
+    width: 40%;
+}
+.education .right_box img{
+    width: 100%;
+}
+
 @media (max-width: 1250px){
-    .main img{
-        width: 25em;
-        right: 0;
-    }
+    .main img{ width: 25em; right: 0; }
 }
 @media (max-width: 1000px){
-    body{
-        font-size: 14px;
-    }
-    .main img{
-        width: 35em;
-        top: 80px;
-    }
-    .main{
-        align-items: flex-end;
-    }
+    body{ font-size: 14px; }
+    .main img{ width: 35em; top: 80px; }
+    .main{ align-items: flex-end; }
     .checkBtn{
-        display: block;
-        width: 25px;
-        height: 25px;
-        cursor: pointer;
-        position: relative;
-        appearance: none;
+        display: block; width: 25px;
+        height: 25px; cursor: pointer;
+        position: relative; appearance: none;
         -webkit-appearance: none;
     }
     .checkBtn::before{
-        content: '\f0c9';
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 700;
-        font-size: 1.9em;
+        content: '\f0c9'; font-family: 'Font Awesome 5 Free';
+        font-weight: 700; font-size: 1.9em;
         color: var(--sec-font-color);
     }
-    .checkBtn:checked::before{
-        content: '\f00d';
-    }
+    .checkBtn:checked::before{ content: '\f00d'; }
     .nav ol{
-        position: absolute;
-        width: 100%;
-        flex-direction: column;
-        background: var(--bg);
-        top: 80px;
-        left: 0;
-        z-index: 100;
-        padding: 1.2em;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        transition: clip-path .4s;
+        position: absolute; width: 100%;
+        flex-direction: column;  background: var(--bg);
+        top: 80px; left: 0;
+        z-index: 100; padding: 1.2em;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); transition: clip-path .4s;
     }
-    .checkBtn:checked ~ ol{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
+    .checkBtn:checked ~ ol{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
     .nav ol::before{
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 5px;
+        content: '';  position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;  height: 5px;
         background: var(--main-color);
     }
 }
 @media (max-width: 900px){
     .main img{
         width: 30em;
+    }   
+    .about .box_wrap, .education .left_box, .education .right_box{
+        width: 60%;
     }
 }
 @media (max-width: 600px){

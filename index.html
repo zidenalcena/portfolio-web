@@ -12,11 +12,11 @@
         <p class="logo">LOGO</p>
         <input type="checkbox" name="" class="checkBtn"/>
         <ol class="center">
-            <a href="#"><li>About</li></a>
-            <a href="#"><li>Education</li></a>
-            <a href="#"><li>Experience</li></a>
-            <a href="#"><li>Projects</li></a>
-            <a href="#"><li>Contact</li></a>
+            <a href="#About"><li>About</li></a>
+            <a href="#Education"><li>Education</li></a>
+            <a href="#Experience"><li>Experience</li></a>
+            <a href="#Projects"><li>Projects</li></a>
+            <a href="#Contact"><li>Contact</li></a>
         </ol>
     </header>
     <section class="main">
@@ -27,8 +27,10 @@
         </div>
         <img src="profile.jpg" alt="">
     </section>
+
+
     <!-- about -->
-    <div class="about center">
+    <div class="about center" id="About">
         <div class="box_wrap">
             <p class="heading">About</p>
             <p class="text">Hello! My name is Damien Braun, and I'm a web developer. I have a diverse set of skills,ranging from design, to HTML + CSS + javascript.</p>
@@ -44,8 +46,10 @@
             </div>
         </div>
     </div>
+
+
     <!-- education -->
-    <div class="education center">
+    <div class="education center" id="Education">
         <div class="left_box">
             <h1 class="heading">Education</h1>
             <div class="container">
@@ -62,6 +66,52 @@
         <div class="right_box">
             <img src="university.jpg" alt="">
         </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="experience center" id="Experience">
+        <h3>Experience</h3>
+        <ul>
+            <li>
+                <small>2018 Now</small>
+                <p>Senior Product Designer</p>
+                <p>Nike</p>
+            </li>
+            <li>
+                <small>2012-2018</small>
+                <p>Visual Designer</p>
+                <p>Converse</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Projects -->
+    <div class="projects center" id="Projects">
+        <h3>Projects</h3>
+        <div class="container">
+            <a href="https://github.com/shubham44-code/COVID-19-Tracker">
+                <div>Covid 19 Tracker</div>
+            </a>
+            <a href="https://github.com/shubham44-code/Weather-App">
+               <div>Weather App</div>
+            </a>
+            <a href="https://github.com/shubham44-code/Movies-Search-Api-Js">
+               <div>Movies Search App</div>
+            </a>
+            <a href="https://github.com/shubham44-code/social-websites">
+                <div>Social Media Website</div></a>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact center" id="Contact">
+        <h3>Contact</h3>
+        <form action="" class="center">
+            <input type="text" name="" id="">
+            <input type="email" name="" id="">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <button class="btn">SUBMIT</button>
+        </form>
     </div>
 </body>
 </html>
